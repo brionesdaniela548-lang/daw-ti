@@ -10,3 +10,5 @@ admin.site.register(Portfolio, PortfolioAdmin) #el modelo portfolio se registre 
 
 
 
+
+

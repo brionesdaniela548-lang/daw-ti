@@ -13,12 +13,17 @@
 
 	      <div class="row project">
 	      	<div class="col-lg-3 col-md-4 offset-lg-1">
-			      <img class="img-fluid" src="{% static 'core/img/about-bg.jpg' %}" alt="">
+			      {% if project.image %}
+                      <img class="img-fluid" src="{{ project.image.url }}" alt="">
+                  {% else %}
+                      <img class="img-fluid" src="{% static 'core/img/about-bg.jpg' %}" alt="">
+                  {% endif %}
 	      	</div>
 	        <div class="col-lg-7 col-md-8">
                 <h2 class="section-heading title">
-                    {{ Project.title }} </h2>
-	          <p><a href="http://google.com">Más información</a></p>
+                    {{ project.title }}
+                </h2>
+                <p><a href="http://google.com">Más información</a></p>
 	      	</div>
 	      </div>
 
