@@ -1,0 +1,35 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% block background %} {% static 'core/img/dan.JPG'%} {% endblock%}
+
+{% block header %}
+<h1>Portada</h1>
+
+
+{% endblock %}
+{% block content %}
+<div class="container">
+	      <!-- Proyecto -->
+	      <div class="row project">
+	      	<div class="col-lg-3 col-md-4 offset-lg-1">
+			      <img class="img-fluid" src="img/about-bg.jpg" alt="">
+	      	</div>
+	        <div class="col-lg-7 col-md-8">
+	      		<h2 class="section-heading title">Segundo proyecto</h2>
+	          <p>Realice un proyecto de desarrollo web sobre un sistema de registro de estudiantes con Boostrap y vite.</p>
+	          <p><a href="http://google.com">Más información</a></p>
+	      	</div>
+	      </div>
+	      <!-- Proyecto -->
+	      <div class="row project">
+	      	<div class="col-lg-3 col-md-4 offset-lg-1">
+			      <img class="img-fluid" src="img/home-bg.jpg" alt="">
+	      	</div>
+	        <div class="col-lg-7 col-md-8">
+	      		<h2 class="section-heading title">Primer proyecto</h2>
+	          <p>Realice un proyecto de desarrollo web sobre un sistema de registro de estudiantes con Boostrap y vite.</p>
+	          <p><a href="http://google.com">Más información</a></p>
+	      	</div>
+	      </div>
+		  </div>
+{% endblock %}
