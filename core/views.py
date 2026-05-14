@@ -16,6 +16,6 @@ def contacto(request):
 
 def persona_view(request):
     persona = Persona.objects.first()  # 1 registro o None
-    return render(request, "core/base.html", {"persona": persona})
+    return render(request, "core/contacto.html", {"persona": persona})
 
 
