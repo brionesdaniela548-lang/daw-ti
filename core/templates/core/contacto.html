@@ -1,17 +1,29 @@
 {% extends 'core/base.html' %}
 
 {% load static %}
-{% block background %} {% static 'core/img/contact-bg.jpg'%} {% endblock%}
+
+{% block background %}
+    {% static 'core/img/contact-bg.jpg' %}
+{% endblock %}
 
 {% block content %}
- <div class="container">
-      <div class="row">
+
+<div class="container">
+    <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
-          <p>Ecuador. Portoviejo - Manabi.</p>
-          <br>
-          <p><b>Teléfono:</b> +593 98 758 47 67</p>
-          <p><b>Honorarios:</b> 500$/h (precio base)</p>
+            {% if persona %}
+                <p><b>Nombre:</b> {{ persona.name }} {{ persona.apellidos }}</p>
+                <p><b>Dirección:</b> {{ persona.direccion }}</p>
+                <p><b>Teléfono:</b> {{ persona.telefono }}</p>
+                <p><b>Email:</b> {{ persona.email }}</p>
+                <p><b>Profesión:</b> {{ persona.trabajo }}</p>
+                <p><b>Título:</b> {{ persona.titulo }}</p>
+                <p><b>Biografía:</b> {{ persona.biografia }}</p>
+            {% else %}
+                <p>No hay información de la persona.</p>
+            {% endif %}
         </div>
-      </div>
     </div>
+</div>
+
 {% endblock %}
